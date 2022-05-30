@@ -4,7 +4,7 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-6">
-              <nav-bar-component />
+            <nav-bar-component />
           </div>
         </div>
         <h1 class="title-big">For your pleasure</h1>
@@ -14,7 +14,11 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-4 offset-2">
-            <img class="shop__girl" src="@/assets/img/coffee_goods.jpg" alt="girl" />
+            <img
+              class="shop__girl"
+              src="@/assets/img/coffee_goods.jpg"
+              alt="girl"
+            />
           </div>
           <div class="col-lg-4">
             <div class="title">About our beans</div>
@@ -44,42 +48,12 @@
         <div class="row">
           <div class="col-lg-10 offset-lg-1">
             <div class="shop__wrapper">
-              <div class="shop__item">
-                <img src="@/assets/img/good-1.jpg" alt="coffee" />
-                <div class="shop__item-title">Solimo Coffee Beans 2kg</div>
-                <div class="shop__item-country">Brazil</div>
-                <div class="shop__item-price">10.73$</div>
-              </div>
-              <div class="shop__item">
-                <img src="@/assets/img/good-1.jpg" alt="coffee" />
-                <div class="shop__item-title">Presto Coffee Beans 1kg</div>
-                <div class="shop__item-country">Brazil</div>
-                <div class="shop__item-price">15.99$</div>
-              </div>
-              <div class="shop__item">
-                <img src="@/assets/img/good-1.jpg" alt="coffee" />
-                <div class="shop__item-title">AROMISTICO Coffee 1kg</div>
-                <div class="shop__item-country">Brazil</div>
-                <div class="shop__item-price">6.99$</div>
-              </div>
-              <div class="shop__item">
-                <img src="@/assets/img/good-1.jpg" alt="coffee" />
-                <div class="shop__item-title">Solimo Coffee Beans 2kg</div>
-                <div class="shop__item-country">Brazil</div>
-                <div class="shop__item-price">10.73$</div>
-              </div>
-              <div class="shop__item">
-                <img src="@/assets/img/good-1.jpg" alt="coffee" />
-                <div class="shop__item-title">Solimo Coffee Beans 2kg</div>
-                <div class="shop__item-country">Brazil</div>
-                <div class="shop__item-price">10.73$</div>
-              </div>
-              <div class="shop__item">
-                <img src="@/assets/img/good-1.jpg" alt="coffee" />
-                <div class="shop__item-title">Solimo Coffee Beans 2kg</div>
-                <div class="shop__item-country">Brazil</div>
-                <div class="shop__item-price">10.73$</div>
-              </div>
+              <product-card />
+              <product-card />
+              <product-card />
+              <product-card />
+              <product-card />
+              <product-card />
             </div>
           </div>
         </div>
@@ -90,8 +64,51 @@
 
 <script>
 import NavBarComponent from "@/components/NavBarComponent.vue";
+import ProductCard from "@/components/ProductCard.vue";
 
 export default {
-  components: { NavBarComponent },
+  data() {
+    return {
+      cards: [
+        {
+          id: 0,
+          text: "Solimo Coffee Beans 2kg",
+          price: "10.73$",
+          icon: "coffee-1.jpg",
+        },
+        {
+          id: 1,
+          text: "Malogo Coffee Beans 2kg",
+          price: "10.73$",
+          icon: "coffee-1.jpg",
+        },
+        {
+          id: 2,
+          text: "Paulig Coffee Beans 2kg",
+          price: "10.73$",
+          icon: "coffee-1.jpg",
+        },
+        {
+          id: 3,
+          text: "Kimbo Coffee Beans 2kg",
+          price: "10.73$",
+          icon: "coffee-1.jpg",
+        },
+        {
+          id: 4,
+          text: "Lavazza Coffee Beans 2kg",
+          price: "10.73$",
+          icon: "coffee-1.jpg",
+        },
+        {
+          id: 5,
+          text: "Kopi Luwak Coffee Beans 2kg",
+          price: "10.73$",
+          icon: "coffee-1.jpg",
+        },
+      ],
+    };
+  },
+  components: { NavBarComponent, ProductCard },
 };
 </script>

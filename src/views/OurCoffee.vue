@@ -14,7 +14,11 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-4 offset-2">
-            <img class="shop__girl" src="@/assets/img/coffee_girl.jpg" alt="girl" />
+            <img
+              class="shop__girl"
+              src="@/assets/img/coffee_girl.jpg"
+              alt="girl"
+            />
           </div>
           <div class="col-lg-4">
             <div class="title">About our beans</div>
@@ -84,6 +88,48 @@ import NavBarComponent from "@/components/NavBarComponent.vue";
 import ProductCard from "@/components/ProductCard.vue";
 
 export default {
+  data() {
+    return {
+      cards: [
+        {
+          id: 0,
+          text: "Solimo Coffee Beans 2kg",
+          price: "10.73$",
+          icon: "coffee-1.jpg",
+        },
+        {
+          id: 1,
+          text: "Malogo Coffee Beans 2kg",
+          price: "10.73$",
+          icon: "coffee-1.jpg",
+        },
+        {
+          id: 2,
+          text: "Paulig Coffee Beans 2kg",
+          price: "10.73$",
+          icon: "coffee-1.jpg",
+        },
+        {
+          id: 3,
+          text: "Kimbo Coffee Beans 2kg",
+          price: "10.73$",
+          icon: "coffee-1.jpg",
+        },
+        {
+          id: 4,
+          text: "Lavazza Coffee Beans 2kg",
+          price: "10.73$",
+          icon: "coffee-1.jpg",
+        },
+        {
+          id: 5,
+          text: "Kopi Luwak Coffee Beans 2kg",
+          price: "10.73$",
+          icon: "coffee-1.jpg",
+        },
+      ],
+    };
+  },
   components: { NavBarComponent, ProductCard },
 };
 </script>
