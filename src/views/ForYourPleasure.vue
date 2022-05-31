@@ -7,7 +7,7 @@
             <nav-bar-component />
           </div>
         </div>
-        <h1 class="title-big">For your pleasure</h1>
+        <header-title-component title="For your pleasure" />
       </div>
     </div>
     <section class="shop">
@@ -48,12 +48,42 @@
         <div class="row">
           <div class="col-lg-10 offset-lg-1">
             <div class="shop__wrapper">
-              <product-card />
-              <product-card />
-              <product-card />
-              <product-card />
-              <product-card />
-              <product-card />
+              <product-card
+                classItem="shop__item"
+                :name="goods[0].name"
+                :price="goods[0].price"
+                :image="goods[0].image"
+              />
+              <product-card
+                classItem="shop__item"
+                :name="goods[1].name"
+                :price="goods[1].price"
+                :image="goods[1].image"
+              />
+              <product-card
+                classItem="shop__item"
+                :name="goods[2].name"
+                :price="goods[2].price"
+                :image="goods[2].image"
+              />
+              <product-card
+                classItem="shop__item"
+                :name="goods[3].name"
+                :price="goods[3].price"
+                :image="goods[3].image"
+              />
+              <product-card
+                classItem="shop__item"
+                :name="goods[4].name"
+                :price="goods[4].price"
+                :image="goods[4].image"
+              />
+              <product-card
+                classItem="shop__item"
+                :name="goods[5].name"
+                :price="goods[5].price"
+                :image="goods[5].image"
+              />
             </div>
           </div>
         </div>
@@ -65,50 +95,51 @@
 <script>
 import NavBarComponent from "@/components/NavBarComponent.vue";
 import ProductCard from "@/components/ProductCard.vue";
+import HeaderTitleComponent from "@/components/HeaderTitleComponent.vue";
 
 export default {
+  components: { NavBarComponent, ProductCard, HeaderTitleComponent },
   data() {
     return {
-      cards: [
+      goods: [
         {
           id: 0,
-          text: "Solimo Coffee Beans 2kg",
-          price: "10.73$",
-          icon: "coffee-1.jpg",
+          name: "Solimo Coffee Beans 2kg",
+          price: 10.73,
+          image: "coffee-1.jpg",
         },
         {
           id: 1,
-          text: "Malogo Coffee Beans 2kg",
-          price: "10.73$",
-          icon: "coffee-1.jpg",
+          name: "Malogo Coffee Beans 2kg",
+          price: 10.73,
+          image: "coffee-2.jpg",
         },
         {
           id: 2,
-          text: "Paulig Coffee Beans 2kg",
-          price: "10.73$",
-          icon: "coffee-1.jpg",
+          name: "Paulig Coffee Beans 2kg",
+          price: 10.73,
+          image: "coffee-3.jpg",
         },
         {
           id: 3,
-          text: "Kimbo Coffee Beans 2kg",
-          price: "10.73$",
-          icon: "coffee-1.jpg",
+          name: "Kimbo Coffee Beans 2kg",
+          price: 10.73,
+          image: "coffee-1.jpg",
         },
         {
           id: 4,
-          text: "Lavazza Coffee Beans 2kg",
-          price: "10.73$",
-          icon: "coffee-1.jpg",
+          name: "Lavazza Coffee Beans 2kg",
+          price: 10.73,
+          image: "coffee-2.jpg",
         },
         {
           id: 5,
-          text: "Kopi Luwak Coffee Beans 2kg",
-          price: "10.73$",
-          icon: "coffee-1.jpg",
+          name: "Kopi Luwak Coffee Beans 2kg",
+          price: 10.73,
+          image: "coffee-3.jpg",
         },
       ],
     };
   },
-  components: { NavBarComponent, ProductCard },
 };
 </script>
