@@ -64,6 +64,9 @@ export default {
     card() {
       return this.$store.getters["getProductById"](this.$route.params.id);
     },
+    dbPage() {
+      return this.$route.name === 'CoffeePage' ? 'coffee' : 'goods'
+    }
   },
 };
 </script>
